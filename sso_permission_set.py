@@ -16,8 +16,7 @@ your_sso_arn = "",  # {sso_arn}
 is_id = ""  # {identity_store_id}
 
 # Open workbook using openpyxl
-workbook_name = datetime.now().strftime("%Y-%m-%d") + \
-    "-SSO_permissionset_review.xlsx"
+workbook_name = datetime.now().strftime("%Y-%m-%d") + "-SSO_permissionset_review.xlsx"
 try:
     wb = load_workbook(filename=workbook_name)
 except:
