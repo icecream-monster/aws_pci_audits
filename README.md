@@ -22,7 +22,7 @@ python3 -m pip install openpyxl
 ## Scripts
 
 ### Inventory script
-- 'system_review.py` will generate all ec2 instances that have PCI tags
+- `system_review.py` will generate all ec2 instances that have PCI tags
 
 ### Firewall scripts
 
