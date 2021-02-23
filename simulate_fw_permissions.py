@@ -18,7 +18,7 @@ my_session = boto3.session.Session(profile_name = aws_account_id) # Establshing 
 iam = my_session.client('iam')
 
 response = iam.list_roles(
-    PathPrefix = "/aws-reserved/sso.amazonaws.com/us-west-2/" # Only user roles, not serivce roles 
+    PathPrefix = "/aws-reserved/sso.amazonaws.com/{region}/" # Only user roles, not service roles 
 )
 
 # Open workbook using openpyxl
