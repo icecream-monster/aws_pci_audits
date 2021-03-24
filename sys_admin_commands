@@ -1,0 +1,8 @@
+# List number of instances
+aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceId]' --region <region> --output text --profile <profile> | wc -l 
+
+# List number of classic ELbs
+aws elb describe-load-balancers --query 'LoadBalancerDescriptions[*].[DNSName]' --region <region>  --output text --profile <profile> | wc -l 
+
+# List number of (newer) ELBs
+aws elbv2 describe-load-balancers --query 'LoadBalancers[*].[DNSName]' --region <region> --output text --profile <profile> | awk -v OFS="\n" '{$1=$1}1' | wc -l
