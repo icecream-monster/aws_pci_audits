@@ -22,7 +22,7 @@ response = ec2.describe_instances(
             "tag:Name",
             "Values": [
                 "Application",
-                "ndcdms"
+                "pci_tags" # what did you tag your pci as?
             ]
         },
     ], )
